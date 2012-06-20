@@ -39,7 +39,7 @@ public class ContextIO {
 		this.secret = secret;
 		this.ssl = true;
 		this.saveHeaders = false;
-		this.apiVersion = "1.1";
+		this.apiVersion = "2.0";
 	}
 
 
@@ -473,7 +473,7 @@ public class ContextIO {
 
 		OAuthService service = new ServiceBuilder().provider(ContextIOApi.class).apiKey("ptj7pndz").apiSecret("QJnoEhwcdpmwNznA").build();
 		OAuthRequest request = new OAuthRequest(Verb.GET, baseUrl);
-		
+		System.out.println(request);
 		Token nullToken = new Token("", "");
 		service.signRequest(nullToken, request);
 
